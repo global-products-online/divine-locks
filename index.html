@@ -3,11 +3,14 @@
 
 <head>
     <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-N5SGM86');</script>
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-N5SGM86');</script>
     <!-- End Google Tag Manager -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Inner Beauty - Divine Locks Complex</title>
@@ -47,11 +50,41 @@
             border-radius: 0px;
         }
 
+        .btn-header {
+            background: rgb(25, 135, 84);
+            border-radius: 2px;
+            border: 1px solid yellow;
+            color: yellow;
+            padding: 2px 20px 2px 20px;
+        }
+
+        .btn-header:hover {
+            border: 1px solid rgb(129, 129, 56);
+            color: rgb(129, 129, 56);;
+        }
+
         .fda-icons img {
             width: 20em;
             margin-bottom: 150px;
         }
 
+        .header-offer {
+            height: 50px;
+        }
+
+        .header-time {
+            font-size: 0.7em;
+        }
+
+        .header-btn {
+            margin-left: 20px;
+            margin-top: 9px;
+        }
+
+        .header-text {
+            margin-top: 5px;
+            font-size: 14px !important;
+        }
         /* Extra small devices (phones, 600px and down) */
         /* Extra large devices (large laptops and desktops, 1200px and up) */
         @media only screen and (min-width: 1200px) {
@@ -69,14 +102,29 @@
 
 <body>
     <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N5SGM86"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N5SGM86" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
         crossorigin="anonymous"></script>
 
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+
+    <nav class="header-offer fixed-top bg-success">
+        <div class="d-flex justify-content-center">
+            <div class="d-flex flex-column justify-content-center align-items-center">
+                <span class="text-light header-text">BUY 6 BOTTLES AND SAVE $1536</span>
+                <span id="header-minutes" class="text-light header-time"></span>
+            </div>
+            <div class="header-btn">
+                <a href="https://hop.clickbank.net/?affiliate=josigomes&vendor=dvnlocks&tid=btnoffer">
+                    <button type="button" class="btn-header">Act Now</button>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <nav class="navbar fixed-top navbar-expand-lg bg-light mt-5">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Divine Locks Complex</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
@@ -103,7 +151,6 @@
         <div class="row text-center">
             <div class="col-12">
                 <h2 class="display-5 text-primary lead">Divine Locks Complex</h2>
-                <h4 class="text-danger mb-5">ONLY TODAY SAVE UP TO $1536</h4>
             </div>
         </div>
 
@@ -286,6 +333,7 @@
                 var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
                 // Output the result in an element with id="demo"
+                document.getElementById("header-minutes").innerHTML = `${minutes} minutes - ${seconds} seconds`;
                 document.getElementById("minutes").innerHTML = minutes;
                 document.getElementById("seconds").innerHTML = seconds;
 
